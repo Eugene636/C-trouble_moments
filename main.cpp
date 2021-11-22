@@ -166,42 +166,6 @@ std::ostream& operator << (std::ostream& os, const PhoneBook& phonebook) {
 int main () {
 
 	std::ifstream file("PhoneBook.txt");
-/*	std::string s;
-	while ((bool)std::getline (fin, s) == true ) {
-		static int i = 0;
-		std::vector<std::string>out = split (s, ' ');
-		for (auto n : out) std::cout<<n<<std::endl;
-		i++;
-		if (i == 3) break;
-	}
-	Person person1 ("Akaky", "Zaporogsky", true, "Akakievich");
-	Person person2 ("Agaky", "Zhaporogsky", true, "Agakievich");
-	Person person3 ("Akaky", "Zaporogsky", true, "Akakievich");
-	std::cout<<(person2 < person1)<<' '<< (person1 == person2);*/
-//	PhoneNumber phonenumber1 (7, 902, "5091606", 12);
-/*	PhoneNumber phonenumber2 (7, 902, "5091605", 13);
-	std::cout << phonenumber1 << ' '<<phonenumber2<<std::endl;
-	std::cout << (phonenumber1 < phonenumber2)<<std::endl;*/
-/*	PhoneBook book (fin);
-	std::cout << book <<std::endl;
-	book.SortByName();
-	std::cout << book << std::endl;
-	book.SortByPhone();
-	std::cout << book << std::endl;
-	std::tuple out = book.GetPhoneNumber("Dzagoev");
-	std::cout << std::get<0>(out);
-	if (std::get<1>(out) != std::nullopt) std::cout<<(std::get<1>(out)).value()<<std::endl;
-	else (std::cout << std::endl);
-	Person Ilin;
-	Ilin.m_Surname = "Ilin";
-	Ilin.m_Middle_name = "Artemovich";
-	Ilin.m_Name = "Petr";
-	book.ChangePhoneNumber (Ilin, phonenumber1);
-	out = book.GetPhoneNumber("Ilin");
-	std::cout << std::get<0>(out);
-	if (std::get<1> (out) != std::nullopt) std::cout<<(std::get<1>(out)).value()<<std::endl;
-	else (std::cout << std::endl);
-	fin.close();*/
 	PhoneBook book(file);
        std::cout << book;
  
