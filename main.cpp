@@ -7,7 +7,7 @@
 #include <deque>
 #include <list>
 ///////////////////////////////////////////////////////////////////Task1
-/*Имеется отсортированный массив целых чисел. Необходимо разработать функцию insert_sorted, которая принимает вектор и новое число и вставляет новое число в определенную позицию в векторе, чтобы упорядоченность контейнера сохранялась. Реализуйте шаблонную функцию insert_sorted, которая сможет аналогично работать с любым контейнером, содержащим любой тип значения. */
+
 template <typename T, template<typename> class   C>
 void insert_sorted (C <T>& Vector1, const T & insert_value) {
 	if (*Vector1.begin() <= *(Vector1.end() - 1)) {
@@ -21,12 +21,6 @@ void insert_sorted (C <T>& Vector1, const T & insert_value) {
 	//	std::cout << *it <<std::endl;
 	}
 }
-
-/*template <typename T>
-void insert_sorted (C <T>& Vector1, const T & insert_value) {
-	auto it = std::lower_bound(Vector1.begin(), Vector1.end(), insert_value);
-	Vector1.insert (it, insert_value);
-}*/
 
 
 
@@ -113,7 +107,7 @@ void Task1_test () {
 }
 int main () {
 	Task1_test ();
-//	Task2 ();
+	Task2 ();
 	
     
 	return 0;
