@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package University;
+
+message FullName {
+	string m_Name = 1;
+	optional string m_Middle_name = 2;
+	string m_Last_name = 3;
+}
+message Student {
+	FullName m_fullname = 1;
+	repeated int32 m_Scores = 2;
+	double m_Medium_score = 3;
+}
+message StudentsGroup {
+	repeated Student m_group = 1;
+}
